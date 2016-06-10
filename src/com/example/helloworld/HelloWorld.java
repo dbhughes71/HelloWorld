@@ -20,5 +20,9 @@ public class HelloWorld {
         x=x*2;
         if (x>y) System.out.println("x is greater than y");
         if (x==y) System.out.println("x now equal to y");
+
+        //For loop sample code
+        for(x=0;x<10;x=x+1)
+            System.out.println("This is x: " + x);
     }
 }
