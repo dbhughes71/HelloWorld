@@ -130,6 +130,21 @@ public class HelloWorld {
             System.out.println("(!a & b) | (a & !b) = " + f);
             System.out.println("    !a = " + g);
         }
+
+        //Ternary Operator '?'
+        //The general form being: expression1 ? expression 2 : expression 3
+        //where if expression1 is true then expression 2 is evaluated, else expression3
+        {
+            int i, k;
+            i = 10;
+            k = i < 0 ? -i : i;  //gets the absolute value of i
+            System.out.print("Absolute value of ");
+            System.out.println(i + " is " + k);
+            i = -10;
+            k = i < 0 ? -i : i;  //gets the absolute value of i
+            System.out.print("Absolute value of ");
+            System.out.println(i + " is " + k);
+        }
     }
 
 }
