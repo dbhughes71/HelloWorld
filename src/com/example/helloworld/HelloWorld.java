@@ -169,6 +169,42 @@ public class HelloWorld {
                         System.out.println("i is 10 or more");
                 }
         }
+
+
+        //Iteration statements
+        {
+            //WHILE
+            int n = 10;
+            while (n>0){
+                System.out.println("tick " + n);
+                n--;
+            }
+
+            //DO WHILE
+            n = 0;
+            do {
+                System.out.println("tick " + n);
+                n++;
+
+            } while (n<11);
+
+            //FOR loop with multiple variables
+            int a,b;
+            for (a=1, b=4; a<b; a++, b--) {
+                System.out.print("a = " + a);
+                System.out.println(",  b = " + b);
+            }
+
+            //FOR EACH loop
+            int nums[] = {1,2,3,4,5,6,7,8,9,10};
+            int sum = 0;
+            for (int x: nums) {
+                sum += x;
+                System.out.println("Value is: " + x + " : Summation so far is " + sum);
+                if (x==5) break;  //terminate the for-loop when the loop reaches 5th iteration.
+            }
+            System.out.println("Summation: " + sum);
+        }
     }
 
 }
