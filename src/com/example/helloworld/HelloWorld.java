@@ -145,6 +145,30 @@ public class HelloWorld {
             System.out.print("Absolute value of ");
             System.out.println(i + " is " + k);
         }
+
+        //Switch Statement with and without break statement
+        {
+            for (int i=0;i<12;i++)
+                switch (i) {
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        System.out.println("i is less than 5");
+                        break;
+                    case 5:
+                    case 6:
+                    case 7:
+                    case 8:
+                    case 9:
+                        System.out.println("i is less than 10");
+                        break;
+                    case 10:
+                    default:
+                        System.out.println("i is 10 or more");
+                }
+        }
     }
 
 }
