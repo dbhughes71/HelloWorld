@@ -262,6 +262,21 @@ public class HelloWorld {
         System.out.println("Factorial of 4 is " + f.fact(4));
         System.out.println("Factorial of 5 is " + f.fact(5));
 
+
+
+        //Demo inheritance.  BoxWeight extends Box by adding Weight instance variable.
+        //Also demonstrates the use of super to access super-class Box's constructor
+        BoxWeight myboxW1 = new BoxWeight(10,20,15,32.3);
+        BoxWeight myboxW2 = new BoxWeight(2, 3, 4, 0.076);
+
+        vol = myboxW1.volume();
+        System.out.println("Volume of myboxW1 is " + vol);
+        System.out.println("Weight of myboxW1 is " + myboxW1.weight);
+
+        vol = myboxW2.volume();
+        System.out.println("Volume of myboxW2 is " + vol);
+        System.out.println("Weight of myboxW2 is " + myboxW2.weight);
+
     }
 
 }

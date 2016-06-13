@@ -18,6 +18,21 @@ public class Box {
     }
 
 
+    //constructs a clone of another box
+    Box(Box ob) {
+        width = ob.width;
+        depth = ob.depth;
+        height = ob.height;
+    }
+
+
+    //constructor used when no dimensions are specified
+    Box() {
+        width = -1;
+        depth = -1;
+        height= -1;
+    }
+
     //calcs the volume
     double volume () {
         return width * height * depth;
