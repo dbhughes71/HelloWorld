@@ -277,6 +277,23 @@ public class HelloWorld {
         System.out.println("Volume of myboxW2 is " + vol);
         System.out.println("Weight of myboxW2 is " + myboxW2.weight);
 
+
+        //Demo of dynamic method dispatch and method overriding
+        Figure fig = new Figure (10,10);
+        Rectangle rec = new Rectangle (9,5);
+
+        Triangle tri = new Triangle (10,8);
+        Figure figref;
+
+        figref = rec;
+        System.out.println("Area is " + figref.area());  //observe how a single interface is achieved for multiple types of objects.
+
+        figref = tri;
+        System.out.println("Area is " + figref.area());
+
+        figref = fig;
+        System.out.println("Area is " + figref.area());
+
     }
 
 }
