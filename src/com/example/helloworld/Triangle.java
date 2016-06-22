@@ -4,6 +4,8 @@ package com.example.helloworld;
  * Created by davidhughes on 14/06/16.
  */
 public class Triangle extends Figure {
+
+    //Constructor using parent class constructor
     Triangle (double a, double b) {
         super (a, b);
     }

@@ -278,8 +278,8 @@ public class HelloWorld {
         System.out.println("Weight of myboxW2 is " + myboxW2.weight);
 
 
-        //Demo of dynamic method dispatch and method overriding
-        Figure fig = new Figure (10,10);
+        //Demo of dynamic method dispatch and method overriding (including abstract class)
+        //Figure fig = new Figure (10,10);  This is now illegal since Figure is an abstract class
         Rectangle rec = new Rectangle (9,5);
 
         Triangle tri = new Triangle (10,8);
@@ -291,8 +291,29 @@ public class HelloWorld {
         figref = tri;
         System.out.println("Area is " + figref.area());
 
-        figref = fig;
-        System.out.println("Area is " + figref.area());
+
+        //Demo of a class implementing an interface
+        Client c = new Client();
+        c.callback(6);   //this method implements the interface Callback
+        c.nonIfaceMeth();  //this is another member of class Client that doesn't implement an interface
+
+        //Demo of an object reference using the interface rather than a class type
+        Callback cb = new Client();  //Here c is an interface type that is referencing a new object of type Client.  This is permitted because Client implements the Callback interface
+        cb.callback(6);   //this method implements the interface Callback and is therefore accessible to object c
+        //c.nonIfaceMeth();  //this is illegal since object c is of an interface that doesn't specify this method.
+
+
+        //Demo of interfaces used on the stack example
+        FixedStack mystack3 = new FixedStack(5);
+        FixedStack mystack4 = new FixedStack(8);
+        //push some numbers onto the stacks
+        for (int j=0;j<5;j++) mystack3.push(j);
+        for (int j=0;j<8;j++) mystack4.push(j);
+        //pop those numbers off the stack
+        System.out.println("Stack in mystack3:");
+        for(int j=0; j<5; j++) System.out.println(mystack3.pop());
+        System.out.println("Stack in mystack4:");
+        for(int j=0; j<5; j++) System.out.println(mystack4.pop());
 
     }
 

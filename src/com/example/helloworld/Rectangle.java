@@ -5,6 +5,8 @@ package com.example.helloworld;
  * Demo of dynamic method dispatch and method overriding.
  */
 public class Rectangle extends Figure {
+
+    //Constructor using parent class constructor
     Rectangle (double a, double b) {
         super (a,b);
     }
